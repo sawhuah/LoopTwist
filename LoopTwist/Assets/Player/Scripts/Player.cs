@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
 {
     public UnityEvent Dead;
     public int Health { get; private set; } = 1;
+    public bool IsDead { get; private set; } = false;
 
     [SerializeField] private TrailRenderer[] _trailRenderers;
 
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
         {
             Dead?.Invoke();
             Destroy(gameObject);
+            IsDead = true;
         }
     }
 }

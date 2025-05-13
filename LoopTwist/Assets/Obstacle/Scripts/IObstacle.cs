@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public interface IObstacle
 {
     public Player Player { get; set; }

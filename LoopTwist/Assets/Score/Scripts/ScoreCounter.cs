@@ -10,18 +10,15 @@ public class ScoreCounter : MonoBehaviour
     [SerializeField] private ObstacleDetector _obstacleDetector;
     [SerializeField] private Player _player;
 
-    private bool _isCanIncrease = true;
-
     private void Start()
     {
         SetScore(0);
         _obstacleDetector.Collided.AddListener(IncreaseScore);
-        _player.Dead.AddListener(OnPlayerDead);
     }
 
     private void IncreaseScore(int amount)
     {
-        if(_isCanIncrease)
+        if(_player.IsDead == false)
         {
             AllScore += amount;
             ScoreChanged?.Invoke(AllScore);
@@ -32,10 +29,5 @@ public class ScoreCounter : MonoBehaviour
     {
         AllScore = value;
         ScoreChanged?.Invoke(AllScore);
-    }
-
-    private void OnPlayerDead()
-    {
-        _isCanIncrease = false;
     }
 }
