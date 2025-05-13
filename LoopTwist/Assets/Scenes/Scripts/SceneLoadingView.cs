@@ -6,7 +6,6 @@ public class SceneLoadingView : MonoBehaviour
 {
     [SerializeField] private GameObject _loadingScreen;
     [SerializeField] private SceneLoader _sceneLoader;
-    [SerializeField] private TMP_Text _progressLabel;
     [SerializeField] private Image _progressFiller;
 
     private bool _isAnySceneLoading = false;
@@ -21,9 +20,6 @@ public class SceneLoadingView : MonoBehaviour
     {
         if(_isAnySceneLoading)
         {
-            _progressLabel.text = 
-                (_sceneLoader.LoadingOperation.progress * 100).ToString() + "%";
-
             _progressFiller.fillAmount = _sceneLoader.LoadingOperation.progress;
         }
     }

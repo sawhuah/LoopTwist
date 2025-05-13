@@ -9,9 +9,10 @@ public class ScoreCounter : MonoBehaviour
 
     [SerializeField] private ObstacleDetector _obstacleDetector;
     [SerializeField] private Player _player;
+
     private bool _isCanIncrease = true;
 
-    private void Awake()
+    private void Start()
     {
         SetScore(0);
         _obstacleDetector.Collided.AddListener(IncreaseScore);
