@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 // summary
 public class PlayerMover : MonoBehaviour
 {
+    [SerializeField] private Player _player;
     [SerializeField] private PointerDownHandler _pointerDownHandler;
     [SerializeField] private Transform _objectToRotate;
     [SerializeField] private float _rotationSpeed = 300f;
@@ -14,6 +15,7 @@ public class PlayerMover : MonoBehaviour
     private void Awake()
     {
         _pointerDownHandler.Clicked.AddListener(ChangeDirection);
+        _player.Dead.AddListener(StopRotating);
     }
 
     private void Update()
@@ -31,5 +33,10 @@ public class PlayerMover : MonoBehaviour
         {
             _direction = -1;
         }
+    }
+
+    private void StopRotating()
+    {
+        _direction = 0;
     }
 }

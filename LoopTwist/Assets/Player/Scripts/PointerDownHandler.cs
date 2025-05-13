@@ -9,5 +9,6 @@ public class PointerDownHandler : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         Clicked?.Invoke(eventData);
+        
     }
 }
