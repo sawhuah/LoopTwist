@@ -1,15 +1,20 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class PointerDownHandler : MonoBehaviour
 {
     public UnityEvent Pressed;
-
     private bool hasFired = false;
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !hasFired)
+        if (Input.GetMouseButtonDown(0) && !hasFired && !IsPointerOverUI())
         {
             hasFired = true;
             Pressed?.Invoke();
@@ -23,7 +28,7 @@ public class PointerDownHandler : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
-            if (touch.phase == TouchPhase.Began && !hasFired)
+            if (touch.phase == TouchPhase.Began && !hasFired && !IsPointerOverUI(touch))
             {
                 hasFired = true;
                 Pressed?.Invoke();
@@ -34,5 +39,15 @@ public class PointerDownHandler : MonoBehaviour
                 hasFired = false;
             }
         }
+    }
+
+    private bool IsPointerOverUI()
+    {
+        return EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+    }
+
+    private bool IsPointerOverUI(Touch touch)
+    {
+        return EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(touch.fingerId);
     }
 }
