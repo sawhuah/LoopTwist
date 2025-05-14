@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: c4d541ef967b1284890a00fe5b0523b2
+guid: 75a987a32498a9e449f3ad10512dbcdf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7762350047352875558
-    second: Pause_0
+      213: 9082984216331087418
+    second: LoopTwistAtlas 1_0
   - first:
-      213: 7690072442612862611
-    second: Pause_1
+      213: -1862080328415691095
+    second: LoopTwistAtlas 1_1
+  - first:
+      213: -4207001768705735598
+    second: LoopTwistAtlas 1_2
+  - first:
+      213: -7205978155889192221
+    second: LoopTwistAtlas 1_3
+  - first:
+      213: 4677778980570929090
+    second: LoopTwistAtlas 1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -80,7 +89,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -129,11 +138,53 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pause_0
+      name: LoopTwistAtlas 1_0
       rect:
         serializedVersion: 2
-        x: 51
-        y: 42
+        x: 11
+        y: 57
+        width: 129
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ee4e2650e3d0e70800000000000000
+      internalID: 9082984216331087418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopTwistAtlas 1_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 61
+        width: 186
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae3a899ecf8826e0800000000000000
+      internalID: -1862080328415691095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopTwistAtlas 1_2
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 101
         width: 123
         height: 141
       alignment: 0
@@ -143,8 +194,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad59b4532c7964490800000000000000
-      internalID: -7762350047352875558
+      spriteID: 254cad65e2abd95c0800000000000000
+      internalID: -4207001768705735598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LoopTwistAtlas 1_4
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 60
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c718bae23fcae040800000000000000
+      internalID: 4677778980570929090
       vertices: []
       indices: 
       edges: []
@@ -152,7 +224,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 903422096ea83f04f96935113d14c04e
+    spriteID: 8b6752269457ece4d8b4917e2c666436
     internalID: 0
     vertices: []
     indices: 
@@ -160,7 +232,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pause_0: -7762350047352875558
+      LoopTwistAtlas 1_0: 9082984216331087418
+      LoopTwistAtlas 1_1: -1862080328415691095
+      LoopTwistAtlas 1_2: -4207001768705735598
+      LoopTwistAtlas 1_4: 4677778980570929090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
