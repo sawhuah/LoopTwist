@@ -1,6 +1,4 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 // summary
 // A script, that moves player by rotating any object on the scene
@@ -28,7 +26,7 @@ public class PlayerMover : MonoBehaviour
         }
     }
 
-    private void ChangeDirection() =>
+    public void ChangeDirection() =>
         _direction = _direction == 1 ? -1 : 1;
 
     private void StopRotating() =>
