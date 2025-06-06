@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6140849967595161411}
   - component: {fileID: -2843212682379324292}
   m_Layer: 0
-  m_Name: ObstacleKiller (Triangle)
+  m_Name: ObstacleHelper (Triangle)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

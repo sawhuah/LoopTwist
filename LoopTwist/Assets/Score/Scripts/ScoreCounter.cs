@@ -10,13 +10,13 @@ public class ScoreCounter : MonoBehaviour
     [SerializeField] private ObstacleDetector _obstacleDetector;
     [SerializeField] private Player _player;
 
-    private void Start()
+    private void OnEnable()
     {
         SetScore(0);
         _obstacleDetector.Collided.AddListener(IncreaseScore);
     }
 
-    private void IncreaseScore(int amount)
+    public void IncreaseScore(int amount)
     {
         if(_player.IsDead == false)
         {

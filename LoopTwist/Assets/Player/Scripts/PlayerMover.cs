@@ -6,16 +6,14 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private Player _player;
-    [SerializeField] private PointerDownHandler _pointerDownHandler;
     [SerializeField] private Transform _objectToRotate;
     [SerializeField] private float _rotationSpeed = 300f;
 
     private int _direction = -1; // 1 - counterclockwise, -1 - clockwise
 
-    private void Awake()
+    private void OnEnable()
     {
-        _pointerDownHandler.Pressed.AddListener(ChangeDirection);
-        _player.Dead.AddListener(StopRotating);
+        _player.Dead.AddListener(OnDead);
     }
 
     private void Update()
@@ -29,6 +27,6 @@ public class PlayerMover : MonoBehaviour
     public void ChangeDirection() =>
         _direction = _direction == 1 ? -1 : 1;
 
-    private void StopRotating() =>
+    private void OnDead() =>
         _rotationSpeed = 0;
 }

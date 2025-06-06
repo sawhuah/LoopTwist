@@ -8,7 +8,7 @@ public class ObstacleDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponent<IObstacle>() != null)
+        if(collision.GetComponent<ObstacleKiller>() != null)
         {
             Collided?.Invoke(_scoreCounter._scoreIncreasingFor1Obstacle);
         }

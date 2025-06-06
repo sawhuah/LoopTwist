@@ -9,12 +9,6 @@ public class Player : MonoBehaviour
 
     [SerializeField] private TrailRenderer[] _trailRenderers;
 
-    private void Start()
-    {
-        Application.targetFrameRate = 120;
-        QualitySettings.vSyncCount = 0;
-    }
-
     private void Update()
     {
         for(int i = 0; i <  _trailRenderers.Length; i++)
