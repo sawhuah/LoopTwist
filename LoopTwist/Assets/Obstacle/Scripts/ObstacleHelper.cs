@@ -12,7 +12,11 @@ public class ObstacleHelper : MonoBehaviour, IObstacle
 
     public void PerformAction()
     {
-        ScoreCounter.IncreaseScore(_scoreIncreasing);
+        for(int i = 0; i < _scoreIncreasing; i++)
+        {
+            ScoreCounter.IncreaseScore(1);
+        }
+
         Destroy(gameObject);
     }
 }

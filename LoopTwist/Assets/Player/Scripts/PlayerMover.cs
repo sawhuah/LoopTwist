@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private Player _player;
+    [SerializeField] private PauseHandler _pauseHandler;
     [SerializeField] private Transform _objectToRotate;
     [SerializeField] private float _rotationSpeed = 300f;
 

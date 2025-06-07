@@ -23,6 +23,6 @@ public class PauseView : MonoBehaviour
         _pauseScreenAnimator.SetBool("IsAssigned", isPaused);
         _pauseButton.SetActive(!isPaused);
 
-        _scoreLabel.text = "SCORE: " + _scoreCounter.AllScore.ToString();
+        _scoreLabel.text = _scoreCounter.AllScore.ToString();
     }
 }

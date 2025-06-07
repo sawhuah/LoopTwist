@@ -29,5 +29,5 @@ public class ObstacleMover : MonoBehaviour
         {
             _movementSpeed -= 0.2f;
         }
-    }    
+    }
 }

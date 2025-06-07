@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public int Health { get; private set; } = 1;
     public bool IsDead { get; private set; } = false;
 
+    [SerializeField] private AudioSource _bonusCollectingSound;
     [SerializeField] private TrailRenderer[] _trailRenderers;
 
     private void Update()
@@ -22,6 +23,10 @@ public class Player : MonoBehaviour
         if(collision.GetComponent<IObstacle>() != null)
         {
             collision.GetComponent<IObstacle>().PerformAction();
+            if(collision.GetComponent<ObstacleHelper>() != null)
+            {
+                _bonusCollectingSound.Play();
+            }
         }
     }
 

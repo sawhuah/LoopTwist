@@ -35,6 +35,7 @@ public class PauseHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(_pauseDelay);
         Time.timeScale = 0f;
+        PauseSwitched?.Invoke(true);
     }
 
     private void Resume()

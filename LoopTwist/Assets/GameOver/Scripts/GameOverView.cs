@@ -20,7 +20,7 @@ public class GameOverView : MonoBehaviour
     private void OnPlayerDead()
     {
         StartCoroutine(AssignGameOverScreen());
-        _scoreLabel.text = "SCORE: " + _scoreCounter.AllScore.ToString();
+        _scoreLabel.text = _scoreCounter.AllScore.ToString();
     }
 
     private IEnumerator AssignGameOverScreen()

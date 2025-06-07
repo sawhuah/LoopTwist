@@ -4,6 +4,7 @@ public class DeathView : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private ParticleSystem _deathParticle;
+    [SerializeField] private AudioSource _deathSound;
 
     private void Start()
     {
@@ -21,5 +22,6 @@ public class DeathView : MonoBehaviour
     private void OnDeath()
     {
         Instantiate(_deathParticle, transform);
+        _deathSound.Play();
     }
 }
